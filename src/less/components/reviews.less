@@ -1,0 +1,94 @@
+.reviews-block {
+    padding: @padding-block 0;
+
+    .heading-secondary {
+        margin-bottom: 65px;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        .-comment {
+            min-width: 530px;
+            margin: 0;
+            margin-bottom: 25px;
+
+            &::before {
+                display: block;
+                content: '';
+                width: 30px;
+                height: 30px;
+                margin-bottom: 10px;
+                background-repeat: no-repeat;
+                background-image: url('./../img/quotes.png');
+            }
+        }
+
+        .userinfo {
+            display: flex;
+            align-items: center;
+        }
+
+        .photo {
+            width: 65px;
+            margin-right: 25px;
+        }
+        
+        .username {
+            color: @color-primary;
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .userprof {
+            color: @color-primary;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-wrapper {
+    background-image: url('./../img/bg-wrap.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: @screen-l) {
+    .reviews-block {
+    
+        .list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .item {
+            margin-bottom: 60px;
+        }
+
+        .description {
+            color: darken(@color-description, 20%);
+        }
+    }
+}
+
+@media (max-width: @screen-s) {
+    .reviews-block {
+        padding: @padding-block-mobile 0;
+
+        .heading-secondary {
+            margin-bottom: 40px;
+        }
+        
+        .item .-comment {
+            min-width: 300px;
+        }
+    }
+}

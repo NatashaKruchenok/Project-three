@@ -1,0 +1,125 @@
+.offers-block {
+    background-image: url(.././img/offers-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    min-height: 100vh;
+    padding: 0 0 100px;
+    margin-top: 20px;
+
+    .list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .heading-secondary {
+        margin: 0 0 100px;
+    }
+}
+
+.offer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 200px;
+    min-height: 385px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 5px;
+
+    &.--carpathian {
+        background-image: url(.././img/offer-item-bg1.png);
+    }
+
+    &.--alps {
+        background-image: url(.././img/offer-item-bg2.png);
+    }
+
+    &.--pyrenees {
+        background-image: url(.././img/offer-item-bg3.png);
+    }
+
+    &.--rocky {
+        background-image: url(.././img/offer-item-bg4.png);
+    }
+
+    &.--kavkaz {
+        background-image: url(.././img/offer-item-bg5.png);
+    }
+
+    .raiting {
+        padding: 10px 20px;
+
+        img {
+            width: auto;
+        }
+    }
+
+    .info {
+        padding: 10px 20px;
+
+        .title {
+            font-size: 28px;
+            color: #fff;
+            font-weight: 400;
+            margin: 15px 0;
+
+            &:hover {
+                color: lighten(@color-primary, 20%);
+            }
+    
+            &:active {
+                color: @color-primary;
+            }
+        }
+
+        .description {
+            line-height: 22px;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+
+    .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding: 10px 20px;
+
+        .old-price {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: line-through;
+        }
+
+        .current-price {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+
+}
+
+@media (max-width: @screen-m) {
+    .offers-block {
+
+        padding: 0 0 40px;
+
+        .heading-secondary {
+            margin: 0 0 60px;
+        }
+
+        .offer-item {
+            margin-bottom: 30px;
+        }
+    }
+}

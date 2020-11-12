@@ -1,0 +1,71 @@
+.about-block {
+    background-image: url(.././img/about-us-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .heading-secondary {
+        text-align: left;
+        font-size: 20px;
+        margin: 0;
+
+        &::before {
+            margin-left: 0;
+        }
+    }
+
+    .content {
+        &.-left {
+            max-width: 360px;
+            margin-right: 20px;
+        }
+
+        &.-right {
+            margin-top: -40px;
+        }
+
+
+        .button {
+            height: 40px;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: @screen-m) {
+
+    .about-block {
+
+        .inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .heading-secondary {
+            text-align: center;
+
+            &::before {
+                margin-left: auto;
+            }
+
+        }
+
+        .content.-left {
+            order: 2;
+            margin: 40px 0;
+        }
+
+        .button {
+            width: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,36 @@
+.heading-secondary {
+
+    font-family: 'Open Sans' sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: @color-heading;
+
+    &::before {
+        display: block;
+        content: '';
+        background-image: url(.././img/waves-heading.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 81px;
+        height: 7px;
+    }
+
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    color: @color-description;
+    margin: 25px 0;
+    line-height: 1.5;
+    max-width: 450px;
+
+    &.-left {
+        font-size: 14px;
+    }
+}

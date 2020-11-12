@@ -1,0 +1,107 @@
+.sale-block {
+    padding: @padding-block 0;
+    background-image: url(.././img/sale-block-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 140px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .sale-form {
+        max-width: 850px;
+        > .inner {
+            border-radius: 5px;
+            min-height: 55px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 3px;
+        }
+
+        .button {
+        height: 55px;
+        padding: 0 50px;
+
+        }
+
+        .input-wrap {
+            flex-grow: 1;
+            background-color: transparent;
+            position: relative;
+        }
+
+        .input-wrap.username::after {
+            display: block;
+            position: absolute;
+            content: '';
+            left: calc(100% - 2px / 2);
+            top: calc(50% - 40px / 2);
+            width: 2px;
+            height: 40px;
+            background-color: @color-description;
+        }
+
+        input {
+            border: none;
+            padding: 0 20px;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            color: @color-description;
+        }
+
+        .privacy-description {
+            color: @color-primary;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 15px 0;
+
+            &::before {
+                display: inline-flex;
+                content: '';
+                background-image: url(.././img/Lock-privacy.png);
+                width: 14px;
+                height: 16px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: @screen-m) {
+
+    .sale-block {
+        padding: @padding-block-mobile 0;
+
+        .container {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: @screen-s) {
+    .sale-block {
+        .sale-form {
+            > .inner {
+                min-height: 250px;
+                background-color: transparent;
+                flex-direction: column;
+            }
+    
+            .input-wrap.username::after {
+                display: none;
+            }
+    
+            input {
+                border-radius: 5px;
+                height: 65px;
+            }
+        }
+    }
+}

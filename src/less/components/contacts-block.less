@@ -1,0 +1,42 @@
+.contacts-block {
+    padding: 20px 0 160px;
+}
+
+.contact-form {
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 515px;
+    min-width: 330px;
+    padding: 40px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    .heading-secondary {
+        color: @color-primary;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .description {
+        text-align: center;
+        margin: 15px 0 25px;
+        color: #4b515e;
+    }
+
+    input {
+        height: 60px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: @screen-s) {
+    .contacts-block {
+        padding: 20px 0 100px;
+    }
+}
